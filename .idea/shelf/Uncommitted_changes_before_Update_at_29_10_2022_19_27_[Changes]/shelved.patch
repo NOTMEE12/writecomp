@@ -1,0 +1,56 @@
+Index: public/error.html
+===================================================================
+diff --git a/public/error.html b/public/error.html
+deleted file mode 100644
+--- a/public/error.html	(revision 02ef971b207cd20683dc84ad5c245489d804af62)
++++ /dev/null	(revision 02ef971b207cd20683dc84ad5c245489d804af62)
+@@ -1,29 +0,0 @@
+-<!DOCTYPE html>
+-<html lang="en" dir="ltr">
+-
+-  <head>
+-    <meta charset="utf-8">
+-    <title>Heroku - HTML Buildpack</title>
+-    <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+-    <link rel="stylesheet" type="text/css" href="./src/theme.css">
+-  </head>
+-
+-  <body>
+-
+-    <div id="app">
+-      <div class="header">
+-        <h1>Heroku - HTML Buildpack</h1>
+-      </div>
+-
+-      <div class="container">
+-        <p>Page - 404</p>
+-      </div>
+-
+-      <div class="footer">
+-        <p>Heroku - HTML Buildpack</p>
+-      </div>
+-
+-    </div>
+-
+-  </body>
+-</html>
+\ No newline at end of file
+Index: static.json
+===================================================================
+diff --git a/static.json b/static.json
+deleted file mode 100644
+--- a/static.json	(revision 02ef971b207cd20683dc84ad5c245489d804af62)
++++ /dev/null	(revision 02ef971b207cd20683dc84ad5c245489d804af62)
+@@ -1,11 +0,0 @@
+-{
+-    "root": "public",
+-    "clean_urls": true,
+-    "https_only": true,
+-    "error_page": "error.html",
+-    "headers": {
+-        "/**": {
+-            "Access-Control-Allow-Origin": "*"
+-        }
+-    }
+-}
+\ No newline at end of file
