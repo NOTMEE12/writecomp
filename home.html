@@ -54,8 +54,11 @@
             }
             
             time = new Date(28800000 - (date.getTime() - time_start.getTime()))
-            document.getElementById("time").innerHTML = `posoztały czas: ${time.getTime()}`
-            
+            if (time.getTime() > -1) {
+                document.getElementById("time").innerHTML = `posoztały czas: ${time.getDate()}`
+            } else {
+                document.getElementById("time").innerHTML = `pozostały czas: 00:00:00`
+            }
             if ((date.getTime() - time_start.getTime()) > 28800000) {
                 document.getElementById("text").innerHTML = normal_text 
                 return true
