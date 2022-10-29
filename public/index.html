@@ -6,7 +6,7 @@
             text-align: center;
             font: "Arial";
             font-size: 72;
-            color: aqua;
+            color: darkblue;
             background-color: skyblue;
             margin: 0px;
             padding-top: 1%;
@@ -29,6 +29,7 @@
         var your_text = normal_text
         var date = new Date()
         var time_start = new Date(0)
+        var time = new Date(0)
 
         
         function update_text() {
@@ -51,7 +52,12 @@
                 console.log(28800000 - (date.getTime() - time_start.getTime()))
                 console.log("\n")
             }
+            
+            time = new Date(28800000 - (date.getTime() - time_start.getTime()))
+            document.getElementById("time").innerHTML = `posoztały czas: ${time.getTime()}`
+            
             if ((date.getTime() - time_start.getTime()) > 28800000) {
+                document.getElementById("text").innerHTML = normal_text 
                 return true
             } else {
                 return false
@@ -79,10 +85,11 @@
         <div class="main-display" onclick="update_text()">
             <h1> Witaj na stronie w której możesz przekazywać wiadomości innym! </h1>
             <h2> Kliknij aby zobaczyć wiadomość! </h2>
-            <h3> Możesz wpisać twój text ale nie będzie widoczny jeśli jakiś inny jeszcze jest aktywny </h3>
+            <h3> Możesz wpisać swoją wiadomość ale nie będzie ona widoczna jeśli jakiaś inna wiadomość jest jeszcze aktywna </h3>
+            <h3 id="time" onclick="check_update()"> pozostały czas: </h3>
         </div>
         <div class="main-display">
-            <input id="button" placeholder='Twój text'>
+            <input id="button" placeholder='Twoja wiadmość'>
             <input name="wyślij do publiki!" type="submit" onclick="submit()">
         </div>
         
@@ -90,4 +97,11 @@
             <a id="text" onclick="update_text()"> Tu nie ma żadnej wiadomości! napisz swoją, która będzie wyświetlona przez 8 godzin! </a>
         </div>
     </body>
+    
+    <script>
+        var x = setInterval(function() {
+            check_update()
+        }, 1000)
+    
+    </script>
 </html>
