@@ -10,3 +10,6 @@ def home_view():
     with open("./home.html", "r") as html:
         return html.read()
 
+
+if __name__ == '__main__':
+    app.run()
