@@ -7,5 +7,5 @@ app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return open("../home.html").read()
+    return open("home.html").read()
 

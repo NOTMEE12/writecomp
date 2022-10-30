@@ -6,12 +6,6 @@ var time_end = new Date()
 var time = new Date()
 var delay = 8
 var time_since_last_change = null
-const socket = io('http://localhost:3000')
-
-socket.on('chat-message', data => {
-    console.log(data)
-})
-
 
 function check_update() {
     date = new Date(
