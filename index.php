@@ -9,5 +9,7 @@
         $your_text = "<script> document.write(your_text) </script>";
         echo "<script> normal_text = ${your_text} </script>";
     }
-    update_text();
+    while (true) {
+        update_text();
+    }
 ?>
