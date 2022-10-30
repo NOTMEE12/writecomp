@@ -28,7 +28,7 @@
         var normal_text = 'Tu nie ma żadnej wiadomości! napisz swoją, która będzie wyświetlona przez 8 godzin!'
         var your_text = normal_text
         var date = new Date()
-        var time_end = new Date()
+        var time_end = new Date().getTime()
         var time = new Date()
         var delay = 8
         var time_since_last_change = null
@@ -40,7 +40,7 @@
         
         function check_update () {
             date = new Date()
-            time = new Date(time_end.getTime() - date.getTime())
+            time = new Date(time_end - date.getTime())
             // logs
             if (logging == true) {
                 console.log(`delay: ${delay}`)
@@ -67,9 +67,10 @@
         
         function write_text ( text ) {
             if (check_update()) {
-                time_end = new Date(new Date().getTime() + (3600000*delay))
+                time_end = new Date(new Date().getTime() + (3600000*delay)).getTime()
                 your_text = text
-                <?php update_all_clients(your_text, time_end.getTime());   ?>
+                $.post( "index.php" , {your_text: your_text, time_end: time_end})
+                <?php update_all_clients();   ?>
             }
             update_text()
         }
