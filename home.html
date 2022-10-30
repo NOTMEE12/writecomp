@@ -22,10 +22,6 @@
         }
 
     </style>
-
-    <head>
-        <title> WriteComp </title>
-    </head>
     
     <script>
         var logging = false
@@ -36,12 +32,17 @@
         var time = new Date()
         var delay = 8
         var time_since_last_change = null
-
-        function check_update() {
-            date = new Date(
-            time = new Date(time_end.getTime() - date.getTime());
+        
+        function update_text() {
+            check_update()
+            document.getElementById("text").innerHTML = your_text 
+        }
+        
+        function check_update () {
+            date = new Date()
+            time = new Date(time_end.getTime() - date.getTime())
             // logs
-            if (logging === true) {
+            if (logging == true) {
                 console.log(`delay: ${delay}`)
                 console.log(`time to change: ${time.getHours()-1}:${time.getMinutes()}:${time.getSeconds()}`)
                 console.log("============================================\n")
@@ -51,24 +52,19 @@
                 document.getElementById("time").innerHTML = `posoztały czas: ${time.getHours()-1}:${time.getMinutes()}:${time.getSeconds()}`
                 return false
             } else {
-                document.getElementById("time").innerHTML = `Możesz napisać swoją wiadomość!`
-                document.getElementById("text").innerHTML = normal_text
+                document.getElementById("time").innerHTML = `Możesz napisać swoją wiadomość!`      
+                document.getElementById("text").innerHTML = normal_text 
                 return true
             }
         }
-
-        function update_text() {
-            check_update()
-            document.getElementById("text").innerHTML = your_text
-        }
-
-        function submit() {
+        
+        function submit () {
             if (document.getElementById("button").value.trim() != "") {
                 var text = document.getElementById("button").value
                 write_text(text)
             }  else {}
         }
-
+        
         function write_text ( text ) {
             if (check_update()) {
                 time_end = new Date(new Date().getTime() + (3600000*delay))

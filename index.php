@@ -1,1 +1,4 @@
-<?php include_once("home.html"); ?>
+<?php
+session_start();
+include_once("home.html");
+?>
