@@ -6,7 +6,8 @@
 
     function update_text() {
         echo "check_update()";
-        $your_text = "<script> document.write(your_text) </script>"
+        $your_text = "<script> document.write(your_text) </script>";
         echo "<script> normal_text = ${your_text} </script>";
     }
+    update_text();
 ?>
