@@ -48,7 +48,7 @@
                 console.log("============================================\n")
             }
             // if actual time is equal to end time
-            if (date.getTime() <= time_end.getTime()) {
+            if (date.getTime() <= time_end) {
                 document.getElementById("time").innerHTML = `posoztały czas: ${time.getHours()-1}:${time.getMinutes()}:${time.getSeconds()}`
                 return false
             } else {
