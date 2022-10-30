@@ -70,7 +70,7 @@
                 time_end = new Date(new Date().getTime() + (3600000*delay)).getTime()
                 your_text = text
                 $.post( "index.php" , {your_text: your_text, time_end: time_end})
-                <?php update_all_clients(your_text, time_end);   ?>
+                <?php update_all_clients();   ?>
             }
             update_text()
         }
