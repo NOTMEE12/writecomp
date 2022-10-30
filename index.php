@@ -1,4 +1,4 @@
 <?php
-session_start();
-include_once("home.html");
+    include_once("home.html");
+    echo "<script> normal_text = 'try ' </script>"
 ?>
