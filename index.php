@@ -4,7 +4,7 @@
     $your_text = null;
 
     
-    function update_all_clients($text $Time) {
+    function update_all_clients($text, $Time) {
         echo "<script> your_text = ${text} </script>";
         echo "<script> time_end = new Date(${Time}) </script>"
     }
