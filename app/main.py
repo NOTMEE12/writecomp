@@ -7,6 +7,6 @@ app = Flask(__name__)
 
 @app.route("/")
 def home_view():
-    with open(".home.html", "r") as html:
+    with open("./home.html", "r") as html:
         return html.read()
 
