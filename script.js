@@ -16,8 +16,9 @@ function SendData(text, ENDtime){
         data: { 'TEXT': text, 'ENDTIME' : ENDtime},
         succes: function(data) {
             console.log(data)
-        } else {
-            console.log("fail")
+        },
+    	error: function {
+        	console.log("fail")
         }
 
     });
