@@ -9,11 +9,9 @@ var delay = 8
 var time_since_last_change = null
 var hour = 3600000
 
-function SendData(text, ENDtime){
+function SendData(text, Endtime){
 	console.log("sending data")
-	let arr = {}
-	arr.Text = text
-	arr.ENDtime = ENDtime
+	let arr = {'Text': text, 'Endtime': Endtime}
 	console.log(`data expected: ${arr}`)
 
     $.ajax({

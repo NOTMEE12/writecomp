@@ -1,8 +1,8 @@
 <?php
 	# GET VALUE
 	$file_name = "key.txt";
-    $text = json_decode($_POST['Text']);
-    $end_time = json_decode($_POST['Endtime']);
+    $text = $_POST['Text'];
+    $end_time = $_POST['Endtime'];
 
 	# RETURN VALUE
     $last = file_get_contents($file_name);
