@@ -4,6 +4,10 @@
     $text = $_POST['Text'];
     $end_time = $_POST['Endtime'];
 
+	if (empty($_POST)) {
+		print_r("POST form is empty !")
+	}
+
 	# RETURN VALUE
     $last = file_get_contents($file_name);
     print_r("last word: $last\n");
