@@ -14,10 +14,11 @@ function SendData(text, ENDtime){
         type: 'POST',
         url: 'send.php',
         dataType: 'html',
-        data: {
-            'TEXT': text,
-            'ENDTIME' : ENDtime,
+        data: { 'TEXT': text, 'ENDTIME' : ENDtime},
+        succes: function(res) {
+        console.log(res)
         }
+
     });
     console.log('<?php echo "${text};${end_time}"?>')
 }
