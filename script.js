@@ -14,7 +14,7 @@ function SendData(text, ENDtime){
     $.ajax({
         method: 'POST',
         url: 'send.php?',
-        dataType: "json"
+        dataType: "json",
         data: {'TEXT': text, 'ENDTIME': ENDtime},
         succes: function(res) {
             console.log(res)
