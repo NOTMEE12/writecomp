@@ -21,6 +21,8 @@ function SendData(text, ENDtime){
         data: arr,
         success: function(data) {
             console.log(data)
+        }, error: (error) => {
+        	console.log(error)
         }
     });
 }
