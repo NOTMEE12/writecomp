@@ -1,10 +1,11 @@
 <?php
-
-session_start();
-
-setcookie('session_id', uniqid(rand(), true), time() + 3600*24*14, "/", null, null, true);
-
-
 include_once("home.html");
 
+
+$text = $_POST['TEXT'];
+$end_time = $_POST['ENDTIME']
+    
+if (text != null and $end_time != null) {
+    echo "<script> console.log('from php: ${text}; ${end_time}')"
+}
 ?>

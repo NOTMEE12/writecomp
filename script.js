@@ -9,6 +9,18 @@ var delay = 8
 var time_since_last_change = null
 var hour = 3600000
 
+function SendData(text, ENDtime){
+    $.ajax({
+        type: 'POST',
+        url: 'index.php',
+        dataType: 'html',
+        data: {
+            'TEXT': text,
+            'ENDTIME' : ENDtime,
+        }
+    });
+}
+
 function update_text() {
     check_update()
     document.getElementById("text").innerHTML = your_text
@@ -43,6 +55,7 @@ function submit () {
             time_end = new Date(new Date().getTime() + (hour*delay)).getTime()
             your_text = text
             document.getElementById("button").value = ""
+            SendData(your_text, time_end)
         }
         update_text()
     }  else {}
