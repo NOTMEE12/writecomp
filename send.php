@@ -1,7 +1,7 @@
 <?php
 
-    $text = $_GET['TEXT'];
-    $end_time = $_GET['ENDTIME'];
+    $text = $_POST['TEXT'];
+    $end_time = $_POST['ENDTIME'];
 
     if ($text == null) {
     	$text = "undefined"
@@ -9,5 +9,5 @@
     if ($end_time == null) {
     	$end_time = "undefined"
     }
-    print_r("from PHP Post: $_GET")
+    print_r("from PHP Post: $_POST")
 ?>
