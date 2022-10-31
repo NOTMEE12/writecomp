@@ -17,7 +17,7 @@ function SendData(text, Endtime){
     $.ajax({
     	method: 'POST',
         url: 'send.php',
-        data: {'JSON': JSON.stringify()},
+        data: arr,
         success: function(data) {
             console.log(data)
         }, error: (error) => {
