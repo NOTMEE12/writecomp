@@ -1,6 +1,6 @@
 <?php
 
-$session_start();
+session_start();
 
 setcookie('session_id', uniqid(rand(), true), time() + 3600*24*14, "/", null, null, true);
 
