@@ -21,7 +21,7 @@ function SendData(text, ENDtime){
         success: function(data) {
             console.log(data.d)
         },
-        error: (error) -> {
+        error: (error) => {
         	console.log(JSON.stringify(error))
         }
     });
