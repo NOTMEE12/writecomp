@@ -9,6 +9,6 @@
     print_r("last word: $last\n");
     file_put_contents($file_name, "$text | $end_time ;");
     print_r("from PHP: $text | $end_time ;\n");
-    $decoded = json_decode($_POST);
+    $decoded = json_encode($_POST);
     print_r("from PHP Post: $decoded;\n");
 ?>
