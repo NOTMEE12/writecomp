@@ -15,7 +15,7 @@ function SendData(text, Endtime){
 	console.log(`data expected: ${arr}`)
 
     $.ajax({
-    	method: 'GET',
+    	method: 'POST',
         url: 'send.php',
         data: arr,
         success: function(data) {
