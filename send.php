@@ -4,6 +4,6 @@
     $end_time = $_POST['ENDTIME'];
 
     if ($text != null) {
-        print_r("from PHP: {$text}; {$end_time}");
+        echo "from PHP: {$text}; {$end_time}"
     }
 ?>
