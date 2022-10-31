@@ -1,7 +1,7 @@
 <?php
 
-    $text = $_POST['TEXT'];
-    $end_time = $_POST['ENDTIME'];
+    $text = $_POST['Text'];
+    $end_time = $_POST['Endtime'];
 
     if ($text == null) {
     	$text = "undefined"

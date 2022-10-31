@@ -15,14 +15,11 @@ function SendData(text, ENDtime){
     	method: 'POST',
         url: 'send.php',
         data: {
-			'TEXT': text,
-			'ENDTIME': ENDtime
+			'Text': text,
+			'Endtime': ENDtime
         },
         success: function(data) {
             console.log(data.d)
-        },
-        error: (error) => {
-        	console.log(JSON.stringify(error))
         }
     });
 }
