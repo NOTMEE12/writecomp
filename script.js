@@ -17,7 +17,7 @@ function SendData(text, ENDtime){
 
     $.ajax({
     	method: 'POST',
-        url: 'send.php',
+        url: './send.php',
         data: arr,
         success: function(data) {
             console.log(data)
