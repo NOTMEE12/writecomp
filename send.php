@@ -8,5 +8,5 @@
     if ($end_time == null) {
     	$end_time = "undefined";
     }
-    print_r("from PHP Post: $_POST");
+    echo("from PHP Post: $text; $end_time");
 ?>
