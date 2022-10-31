@@ -1,7 +1,7 @@
 <?php
 	# GET VALUE
 	$file_name = "key.txt";
-	$JSON = $_POST['JSON']
+	$JSON = json_decode($_POST['JSON']);
     $text = $JSON['Text'];
     $end_time = $JSON['Endtime'];
 
