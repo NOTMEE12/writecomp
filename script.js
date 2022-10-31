@@ -12,7 +12,7 @@ var hour = 3600000
 function SendData(text, ENDtime){
     $.ajax({
         type: 'POST',
-        url: 'index.php',
+        url: 'send.php',
         dataType: 'html',
         data: {
             'TEXT': text,
@@ -38,7 +38,7 @@ function check_update () {
     // if actual time is equal to end time
     
     if (date.getTime() < time_end) {
-        document.getElementById("time").innerHTML = `posoztały czas: ${time.getHours()-1}:${time.getMinutes()}:${time.getSeconds()}`
+        document.getElementById("time").innerHTML = `pozostały czas: ${time.getHours()-1}:${time.getMinutes()}:${time.getSeconds()}`
         return false
     } else {
         document.getElementById("time").innerHTML = `Możesz napisać swoją wiadomość!`      
