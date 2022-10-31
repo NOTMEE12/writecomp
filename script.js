@@ -19,6 +19,7 @@ function SendData(text, ENDtime){
             'ENDTIME' : ENDtime,
         }
     });
+    console.log('<?php echo "${text};${end_time}"?>')
 }
 
 function update_text() {
