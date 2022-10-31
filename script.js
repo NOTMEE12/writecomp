@@ -10,6 +10,7 @@ var time_since_last_change = null
 var hour = 3600000
 
 function SendData(text, ENDtime){
+	console.log("sending data")
     $.ajax({
         method: 'POST',
         url: 'send.php',
