@@ -10,5 +10,5 @@
     file_put_contents($file_name, "$text | $end_time ;");
     print_r("from PHP: $text | $end_time ;\n");
     $decoded = json_encode($_POST);
-    print_r("from PHP Post: $decoded;\n");
+    print_r("from PHP Post Decoded|normal: $decoded|$_POST;\n");
 ?>
