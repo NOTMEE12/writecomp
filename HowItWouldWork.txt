@@ -1,0 +1,42 @@
+
+
+CHAT ->
+
+1. When button clicked ->
+	-	send data to server
+		#	get data
+		#	send data to all clients
+2. REPEAT ->
+	-	check if server doesn't send any data to client
+	-	update timer
+	
+	
+CODE ->
+
+""" PHP
+<?php 	
+
+
+
+?>
+"""
+
+# STEPS
+
+1. 	When button clicked ->
+	""" HTML
+	<div class="main-display" method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+		<input id="button" placeholder='Twoja wiadmość'>
+		<input type="submit" onclick="submit()" value="wyślij do publiki!">
+	</div>
+	"""/HTML
+
+
+1.1 send data to server
+	""" JS
+	
+	
+	"""
+	
+	
+

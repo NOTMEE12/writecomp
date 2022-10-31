@@ -1,11 +1,9 @@
 <?php 
-    function send_to_all_clients(text, Time){
-        echo "<script> your_text = ${text}";
-        echo "<script> time_end = new Date(${Time}) </script>";
-    }
-    
-    function get_combination_and_send() {
-        send_to_all_clients(echo "<script> console.log(your_text) </script>", echo "<script> console.log(time_end.getTime()) </script>");
-    }
-    get_combination_and_send();
+
+    $html=file_get_contents("home.html");
+    $img_tag= strip_tags($html, '<> </>');
+    $svg_tag='<svg>...';
+    $html=str_replace($img_tag,$svg_tag,$html);
+    file_put_contents($html_file,$html);
+
 ?>
