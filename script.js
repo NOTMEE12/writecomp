@@ -11,16 +11,14 @@ var hour = 3600000
 
 function SendData(text, ENDtime){
     $.ajax({
-        type: 'POST',
+        method: 'POST',
         url: 'send.php',
-        dataType: 'html',
         data: { 'TEXT': text, 'ENDTIME' : ENDtime},
-        succes: function(res) {
-        console.log(res)
+        succes: function(data) {
+            console.log(data)
         }
 
     });
-    console.log('<?php echo "${text};${end_time}"?>')
 }
 
 function update_text() {
