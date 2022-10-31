@@ -16,8 +16,8 @@ function SendData(text, ENDtime){
         url: 'send.php?',
         dataType: "json"
         data: {'TEXT': text, 'ENDTIME': ENDtime},
-        succes: function(data) {
-            console.log(data)
+        succes: function(res) {
+            console.log(res)
         }
     });
 }
