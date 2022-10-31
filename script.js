@@ -14,6 +14,7 @@ function SendData(text, ENDtime){
 	let arr = {}
 	arr.Text = text
 	arr.ENDtime = ENDtime
+	console.log(`data expected: ${arr}`)
 
     $.ajax({
     	method: 'GET',
