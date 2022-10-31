@@ -11,15 +11,16 @@ var hour = 3600000
 
 function SendData(text, ENDtime){
 	console.log("sending data")
+	let arr = {}
+	arr.Text = text
+	arr.ENDtime = ENDtime
+
     $.ajax({
     	method: 'POST',
         url: 'send.php',
-        data: {
-			'Text': text,
-			'Endtime': ENDtime
-        },
+        data: arr,
         success: function(data) {
-            console.log(data.d)
+            console.log(data)
         }
     });
 }
