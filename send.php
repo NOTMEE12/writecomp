@@ -5,7 +5,7 @@
     $end_time = $_POST['Endtime'];
 
 	if (empty($_POST)) {
-		print_r("POST form is empty !");
+		print_r("POST form is empty !\n");
 	}
 
 	# RETURN VALUE

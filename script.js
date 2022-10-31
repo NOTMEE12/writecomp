@@ -10,14 +10,13 @@ var time_since_last_change = null
 var hour = 3600000
 
 function SendData(text, Endtime){
-	console.log("sending data")
+	console.log("\nsending data")
 	let arr = {'Text': String(text), 'Endtime': String(Endtime) }
 	console.log(`data expected: ${arr}`)
-
     $.ajax({
     	method: 'POST',
         url: 'send.php',
-        data: JSON.stringify(arr),
+        data: arr,
         success: function(data) {
             console.log(data)
         }, error: (error) => {
