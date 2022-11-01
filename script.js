@@ -70,7 +70,7 @@ function check_update () {
     } else {
     	// if text on the server is updated
     	text_from_server2 = GetData()
-    	if (text_from_server2[1] != text_from_server[1]) {
+    	if (text_from_server2[1] != time_end) {
     		your_text = text_from_server2[0]
     		time_end = text_from_server2[1]
     		update_text()
