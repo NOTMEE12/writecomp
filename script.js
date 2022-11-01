@@ -25,7 +25,6 @@ function SendData(text, Endtime){
         	console.log(error)
         }
     });
-    console.log("should end")
 }
 function GetData(){
 	$.ajax({
@@ -33,9 +32,7 @@ function GetData(){
 		url: 'update.php/',
 		data: {'nothing here': true},
 		success: function(data) {
-			console.log(data)
-		}, error: (error) => {
-			console.log(error)
+			return data.split(" | ")
 		}
 	})
 	// AVERAGE 125 ms to get response
@@ -56,15 +53,20 @@ function check_update () {
         console.log(`time to change: ${time.getHours()-1}:${time.getMinutes()}:${time.getSeconds()}`)
         console.log("============================================\n")
     }
-    // if actual time is equal to end time
-    
-    if (date.getTime() < time_end) {
+    // if actual time is smaller to end time
+    if (date.getTime() < time_end and GetData()[0] == your_text) {
         document.getElementById("time").innerHTML = `pozostały czas: ${time.getHours()-1}:${time.getMinutes()}:${time.getSeconds()}`
         return false
     } else {
-        document.getElementById("time").innerHTML = `Możesz napisać swoją wiadomość!`      
-        document.getElementById("text").innerHTML = normal_text 
-        return true
+    	if (GetData()[1] > time_end) {
+    		$your_text = GetData[0]
+    		$time_end = GetData[1]
+    		return false
+    	} else {}
+			document.getElementById("time").innerHTML = `Możesz napisać swoją wiadomość!`
+			document.getElementById("text").innerHTML = normal_text
+			return true
+        }
     }
 }
 
@@ -86,6 +88,6 @@ function submit () {
 function Repeat() {
     var x = setInterval(function() {
         check_update()
-    }, 250)
+    }, 375)
 }
 Repeat()
