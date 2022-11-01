@@ -107,3 +107,4 @@ function Repeat() {
 }
 Repeat()
 check_update()
+update_text()
