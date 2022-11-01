@@ -8,6 +8,7 @@ var time = new Date()
 var delay = 8
 var time_since_last_change = null
 var hour = 3600000
+var ret = ["fail przy zdobywaniu tej informacji. załatw se lepszy internet!", 999999999999999999999]
 
 function SendData(text, Endtime){
 	console.log("\nsending data")
@@ -36,7 +37,7 @@ function wait(ms)
 }
 
 function GetData(){
-	let ret = ["fail przy zdobywaniu tej informacji. załatw se lepszy internet!", 999999999999999999999]
+	ret = ["fail przy zdobywaniu tej informacji. załatw se lepszy internet!", 999999999999999999999]
 	$.ajax({
 		METHOD: 'POST',
 		url: 'update.php/',
