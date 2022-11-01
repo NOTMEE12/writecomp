@@ -34,7 +34,7 @@ function GetData(){
 		data: {'nothing here': true},
 		success: function(data) {
 			console.log(data)
-		}, error (error) => {
+		}, error: (error) => {
 			console.log(error)
 		}
 	})
