@@ -62,14 +62,16 @@ function check_update () {
     }
     // if actual time is smaller to end time
     let text_from_server = GetData()
-    text_from_server = text_from_server[0]
-    if (date.getTime() < time_end && text_from_server == your_text) {
+    // if actual time < stop time and server text is the same as client text and server stop time is equal to client stop time
+    if (date.getTime() < time_end && text_from_server == [your_text, time_end]) {
         document.getElementById("time").innerHTML = `pozostały czas: ${time.getHours()-1}:${time.getMinutes()}:${time.getSeconds()}`
         return false
     } else {
-    	if (GetData()[1] > time_end) {
+    	// if text on the server is updated
+    	if (text_from_server[1] > time_end && text_from_server != your_text) {
     		$your_text = GetData[0]
     		$time_end = GetData[1]
+    		update_text()
     		return false
     	} else {
 			document.getElementById("time").innerHTML = `Możesz napisać swoją wiadomość!`
