@@ -41,13 +41,12 @@ function GetData(){
 		METHOD: 'POST',
 		url: 'update.php/',
 		data: {'nothing here': true},
+		async: false,
 		success: function(data) {
 			ret = data.split(" | ")
 		}
 	})
 	// AVERAGE 250 ms to get response
-	// I think max would be 500 so
-	wait(500)
 	return ret
 }
 
