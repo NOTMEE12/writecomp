@@ -27,6 +27,19 @@ function SendData(text, Endtime){
     });
     console.log("should end")
 }
+function GetData() {
+	$.ajax({
+		METHOD: 'POST',
+		url: 'update.php/',
+		data: {'nothing here': true}
+		succes: function(data) {
+			console.log(data)
+		}, error (error) => {
+			console.log(error)
+		}
+	})
+}
+
 
 function update_text() {
     check_update()

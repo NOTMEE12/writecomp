@@ -11,7 +11,7 @@
 	# RETURN VALUE
     $last = file_get_contents($file_name);
     print_r("last word: $last\n");
-    file_put_contents($file_name, "$text | $end_time ;");
+    file_put_contents($file_name, "$text | $end_time");
     print_r("from PHP: $text | $end_time ;\n");
     $decoded = json_encode($_GET);
     print_r("from PHP Post Decoded|normal: $decoded|$_GET;\n");
