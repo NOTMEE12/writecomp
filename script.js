@@ -25,6 +25,7 @@ function SendData(text, Endtime){
         	console.log(error)
         }
     });
+    console.log("should end")
 }
 
 function update_text() {
