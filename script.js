@@ -66,6 +66,7 @@ function check_update () {
     // if actual time < stop time
     if (date.getTime() < time_end) {
         document.getElementById("time").innerHTML = `pozostały czas: ${time.getHours()-1}:${time.getMinutes()}:${time.getSeconds()}`
+        document.getElementById("text").innerHTML = your_text
         return false
     } else {
     	// if text on the server is updated
