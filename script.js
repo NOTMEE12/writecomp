@@ -68,7 +68,7 @@ function check_update () {
         return false
     } else {
     	// if text on the server is updated
-    	if (text_from_server[0] == "") {
+    	if (text_from_server[1] > time_end) {
     		your_text = GetData[0]
     		time_end = GetData[1]
     		update_text()

@@ -4,10 +4,6 @@
     $text = $_GET['Text'];
     $end_time = $_GET['Endtime'];
 
-	if (empty($_POST)) {
-		print_r("POST form is empty !\n");
-	}
-
 	# RETURN VALUE
     $last = file_get_contents($file_name);
     file_put_contents($file_name, "$text | $end_time");
