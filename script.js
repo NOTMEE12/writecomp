@@ -68,12 +68,13 @@ function check_update () {
         return false
     } else {
     	// if text on the server is updated
-    	if (text_from_server[1] > time_end && text_from_server != your_text) {
+    	if (text_from_server[1] > time_end) {
     		$your_text = GetData[0]
     		$time_end = GetData[1]
     		update_text()
     		return false
     	} else {
+    		// if timer is old and text on the server is outdated
 			document.getElementById("time").innerHTML = `Możesz napisać swoją wiadomość!`
 			document.getElementById("text").innerHTML = normal_text
 			return true
