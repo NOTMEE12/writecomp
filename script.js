@@ -45,9 +45,9 @@ function GetData(){
 			ret = data.split(" | ")
 		}
 	})
-	// AVERAGE 125 ms to get response
-	// I think max would be 250 so
-	wait(250)
+	// AVERAGE 250 ms to get response
+	// I think max would be 500 so
+	wait(500)
 	return ret
 }
 
@@ -104,6 +104,6 @@ function submit () {
 function Repeat() {
     var x = setInterval(function() {
         check_update()
-    }, 575)
+    }, 750)
 }
 Repeat()
