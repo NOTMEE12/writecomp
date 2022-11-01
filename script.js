@@ -106,3 +106,4 @@ function Repeat() {
     }, 750)
 }
 Repeat()
+check_update()
