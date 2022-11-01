@@ -64,13 +64,14 @@ function check_update () {
     		$your_text = GetData[0]
     		$time_end = GetData[1]
     		return false
-    	} else {}
+    	} else {
 			document.getElementById("time").innerHTML = `Możesz napisać swoją wiadomość!`
 			document.getElementById("text").innerHTML = normal_text
 			return true
         }
     }
 }
+
 
 function submit () {
     if (document.getElementById("button").value.trim() != "") {
