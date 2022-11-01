@@ -20,6 +20,7 @@ function SendData(text, Endtime){
     	method: 'POST',
         url: 'send.php/',
         data: arr,
+        async, false,
         success: function(data) {
             console.log(data)
         }, error: (error) => {
@@ -28,13 +29,6 @@ function SendData(text, Endtime){
     });
 }
 
-function wait(ms)
-{
-    var d = new Date();
-    var d2 = null;
-    do { d2 = new Date(); }
-    while(d2-d < ms);
-}
 
 function GetData(){
 	ret = ["fail przy zdobywaniu tej informacji. załatw se lepszy internet!", 999999999999999999999]
