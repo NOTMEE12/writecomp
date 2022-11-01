@@ -63,15 +63,16 @@ function check_update () {
     }
     // if actual time is smaller to end time
     text_from_server = GetData()
-    // if actual time < stop time and server text is the same as client text and server stop time is equal to client stop time
-    if (date.getTime() < time_end && text_from_server.slice(0, 1) == [your_text, time_end]) {
+    // if actual time < stop time
+    if (date.getTime() < time_end) {
         document.getElementById("time").innerHTML = `pozostały czas: ${time.getHours()-1}:${time.getMinutes()}:${time.getSeconds()}`
         return false
     } else {
     	// if text on the server is updated
-    	if (text_from_server[2] < ()) {
-    		your_text = GetData[0]
-    		time_end = GetData[1]
+    	text_from_server2 = GetData()
+    	if (text_from_server2[1] != text_from_server[1]) {
+    		your_text = text_from_server2[0]
+    		time_end = text_from_server2[1]
     		update_text()
     		return false
     	} else {
