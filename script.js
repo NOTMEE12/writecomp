@@ -104,7 +104,7 @@ function submit () {
 function Repeat() {
     var x = setInterval(function() {
         check_update()
-    }, 750)
+    }, 850)
 }
 Repeat()
 check_update()
