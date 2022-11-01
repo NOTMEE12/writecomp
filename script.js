@@ -9,6 +9,7 @@ var delay = 8
 var time_since_last_change = null
 var hour = 3600000
 var ret = ["fail przy zdobywaniu tej informacji. załatw se lepszy internet!", 999999999999999999999]
+var text_from_server = []
 
 function SendData(text, Endtime){
 	console.log("\nsending data")
@@ -61,7 +62,7 @@ function check_update () {
         console.log("============================================\n")
     }
     // if actual time is smaller to end time
-    let text_from_server = GetData()
+    text_from_server = GetData()
     // if actual time < stop time and server text is the same as client text and server stop time is equal to client stop time
     if (date.getTime() < time_end && text_from_server == [your_text, time_end]) {
         document.getElementById("time").innerHTML = `pozostały czas: ${time.getHours()-1}:${time.getMinutes()}:${time.getSeconds()}`
