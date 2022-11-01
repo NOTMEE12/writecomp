@@ -20,7 +20,7 @@ function SendData(text, Endtime){
     	method: 'POST',
         url: 'send.php/',
         data: arr,
-        async, false,
+        async: false,
         success: function(data) {
             console.log(data)
         }, error: (error) => {
