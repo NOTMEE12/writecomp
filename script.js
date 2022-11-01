@@ -11,7 +11,9 @@ var hour = 3600000
 
 function SendData(text, Endtime){
 	console.log("\nsending data")
-	let arr = {'Text': $(text).value, 'Endtime': $(Endtime).value }
+	string_text = `${text}`
+	Endtime_string = `${Endtime}`
+	let arr = {'Text': text, 'Endtime': Endtime }
 	console.log(`data expected: ${arr}`)
     $.ajax({
     	method: 'POST',
