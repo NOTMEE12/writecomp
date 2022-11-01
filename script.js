@@ -56,7 +56,7 @@ function check_update () {
     // if actual time is smaller to end time
     let text_from_server = GetData()
     text_from_server = text_from_server[0]
-    if (date.getTime() < time_end and text_from_server == your_text) {
+    if (date.getTime() < time_end && text_from_server == your_text) {
         document.getElementById("time").innerHTML = `pozostały czas: ${time.getHours()-1}:${time.getMinutes()}:${time.getSeconds()}`
         return false
     } else {
