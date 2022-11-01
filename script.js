@@ -36,17 +36,19 @@ function wait(ms)
 }
 
 function GetData(){
+	let ret = ["fail przy zdobywaniu tej informacji. załatw se lepszy internet!", 999999999999999999999]
 	$.ajax({
 		METHOD: 'POST',
 		url: 'update.php/',
 		data: {'nothing here': true},
 		success: function(data) {
-			return data.split(" | ")
+			ret = data.split(" | ")
 		}
 	})
 	// AVERAGE 125 ms to get response
 	// I think max would be 250 so
 	wait(250)
+	return ret
 }
 
 
