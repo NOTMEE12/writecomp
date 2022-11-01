@@ -31,7 +31,7 @@ function GetData(){
 	$.ajax({
 		METHOD: 'POST',
 		url: 'update.php/',
-		data: {'nothing here': true}
+		data: {'nothing here': true},
 		success: function(data) {
 			console.log(data)
 		}, error (error) => {
