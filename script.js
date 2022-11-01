@@ -26,6 +26,15 @@ function SendData(text, Endtime){
         }
     });
 }
+
+function wait(ms)
+{
+    var d = new Date();
+    var d2 = null;
+    do { d2 = new Date(); }
+    while(d2-d < ms);
+}
+
 function GetData(){
 	$.ajax({
 		METHOD: 'POST',
@@ -36,6 +45,8 @@ function GetData(){
 		}
 	})
 	// AVERAGE 125 ms to get response
+	// I think max would be 250 so
+	wait(250)
 }
 
 
