@@ -38,6 +38,7 @@ function GetData(){
 			console.log(error)
 		}
 	})
+	// AVERAGE 125 ms to get response
 }
 
 
